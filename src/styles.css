@@ -99,9 +99,6 @@ p span {
 }
 
 .home .logoImg img {
-  position: absolute;
-  top: 2.5vw;
-  right: 2vw;
   width: 45vw;
   height: auto;
   margin: 0 20px;
@@ -190,8 +187,7 @@ p span {
 .aboutUsContainer .aboutUsTxt,
 .aboutUsContainer .aboutUsImg {
   width: 50vw;
-  height: 400px;
-  border: 2px solid #691B32;
+  min-height: 550px;
 }
 
 .card-container {
