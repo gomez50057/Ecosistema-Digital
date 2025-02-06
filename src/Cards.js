@@ -1,7 +1,9 @@
 // src/Cards.js
 import React from 'react';
 import './styles.css';
-import { cardData, fullCardData } from './utils';
+// import { cardData, fullCardData } from './utils';
+import { cardData } from './utils';
+import ChatbotWelcome from './ChatbotWelcome';
 
 
 const Card = ({ img, link, title, description }) => {
@@ -22,22 +24,22 @@ const Card = ({ img, link, title, description }) => {
 };
 
 
-const CardFull = ({ img, link, title, description }) => {
-  return (
-    <div className={"cardFull"}>
-      <div className="card-img" style={{ backgroundImage: `url(${img})` }}></div>
-      <div className="card-body">
-        <span className="bg"></span>
-        <span className="bg"></span>
-        <span className="bg"></span>
-        <a href={link} target="_blank" className="content" rel="noopener noreferrer">
-          <h2 className="title">{title}</h2>
-          <p className="description">{description}</p>
-        </a>
-      </div>
-    </div>
-  );
-};
+// const CardFull = ({ img, link, title, description }) => {
+//   return (
+//     <div className={"cardFull"}>
+//       <div className="card-img" style={{ backgroundImage: `url(${img})` }}></div>
+//       <div className="card-body">
+//         <span className="bg"></span>
+//         <span className="bg"></span>
+//         <span className="bg"></span>
+//         <a href={link} target="_blank" className="content" rel="noopener noreferrer">
+//           <h2 className="title">{title}</h2>
+//           <p className="description">{description}</p>
+//         </a>
+//       </div>
+//     </div>
+//   );
+// };
 
 const Cards = () => {
   return (
@@ -56,7 +58,7 @@ const Cards = () => {
         </div>
       </div>
 
-      <div className="card-container">
+      {/* <div className="card-container">
         <CardFull
           img={fullCardData.img}
           link={fullCardData.link}
@@ -64,7 +66,7 @@ const Cards = () => {
           description={fullCardData.description}
           fullWidth={true}
         />
-      </div>
+      </div> */}
       <div className="card-container">
         {cardData.map((card, index) => (
           <Card
@@ -76,6 +78,7 @@ const Cards = () => {
           />
         ))}
       </div>
+      <ChatbotWelcome />
     </div>
   );
 };

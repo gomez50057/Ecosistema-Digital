@@ -22,7 +22,7 @@ const Home = () => {
         start: 'Top 2%',          // Cuando el tope del elemento alcanza el centro del viewport
         end: '+=1000',                // La cantidad de scroll (en píxeles) que dura la animación (puedes ajustar este valor)
         scrub: true,                 // Sincroniza la animación con el scroll, haciendo que se reproduzca y se revierta al hacer scroll hacia arriba
-        markers: true,               // Muestra marcadores para depuración (quita en producción)
+        markers: false,               // Muestra marcadores para depuración (quita en producción)
       }
     });
   }, []);

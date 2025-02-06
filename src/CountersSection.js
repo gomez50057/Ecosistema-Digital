@@ -85,13 +85,13 @@ const CountersSection = () => {
 
   return (
     <div className="counters-section" ref={sectionRef}>
-      {visible && (
+      {/* {visible && (
         <>
           <Counter target={32000} text="Habitantes Encuestados" startCounting={visible} />
           <Counter target={70} text="Municipios visitados" startCounting={visible} />
           <Counter target={30000} text="Propuestas" startCounting={visible} />
         </>
-      )}
+      )} */}
     </div>
   );
 };

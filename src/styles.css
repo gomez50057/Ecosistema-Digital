@@ -145,6 +145,7 @@ p span {
   -webkit-backdrop-filter: blur(3px);
   /* Safari support */
   width: 100vw;
+  height: 180px;
   padding: 20px 0 40px;
   margin: -40px 0 60px 0;
   border-radius: 10px;
@@ -195,6 +196,7 @@ p span {
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
+  margin-top: -200px;
 }
 
 .card,
@@ -205,16 +207,17 @@ p span {
   transition: 1s;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transform: perspective(50000px) rotateX(10deg) rotateY(5deg) translateY(100px);
 }
 
 .card {
-  width: 300px;
-  height: 450px;
+  width: 958px;
+  height: 540px;
 }
 
 .cardFull {
-  width: 100vw;
-  height: 300px;
+  width: 958px;
+  height: 540px;
 }
 
 .card-img,
@@ -235,8 +238,11 @@ p span {
   width: 85%;
   height: 87%;
   border-radius: 20px;
+  padding: 0 30px;
   overflow: hidden;
-  border: 5px solid var(--vinoOsc);
+  border: 6px solid var(--vinoClr);
+  /* border: 5px solid rgba(105, 27, 50, 0.8); */
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .card:hover,
@@ -246,14 +252,18 @@ p span {
 
 .card-body .bg {
   position: absolute;
-  background: var(--vinoOsc);
+  background: rgba(245, 245, 245, 0.8);
   border-radius: 100px;
   width: 0%;
-  transition: .5s;
+  height: 100%;
+  transition: 0.5s;
+  backdrop-filter: blur(100px);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.5);
+  transform-origin: center;
 }
 
 .card-body .bg:nth-child(1) {
-  height: 25%;
+  height: 55%;
   transform-origin: left;
   top: 0;
   left: -30%;
@@ -261,17 +271,17 @@ p span {
 }
 
 .card-body .bg:nth-child(2) {
-  height: 50%;
+  height: 40%;
   transform-origin: right;
-  top: 5%;
+  top: 3%;
   right: -30%;
   transform: rotate(-10deg);
 }
 
 .card-body .bg:nth-child(3) {
-  height: 50%;
+  height: 80%;
   transform-origin: left;
-  top: 70%;
+  top: 90%;
   left: -30%;
   transform: rotate(-10deg);
 }
@@ -331,17 +341,20 @@ p span {
 }
 
 .title {
-  font-size: 20px;
+  font-size: 1.5rem;
   margin-bottom: 20px;
-  color: var(--doradoClr);
+  color: var(--doradoOsc);
   text-transform: uppercase;
+  font-style: italic;
 }
 
 .description {
-  font-size: 16px;
+  font-size: 20px;
   margin: 0;
-  color: var(--grisClr);
+  color: var(--grisOsc);
   margin: 10px 10px;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 .card-body a {
